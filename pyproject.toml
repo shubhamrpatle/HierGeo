@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hiergeo"
+version = "1.0.0"
+description = "HierGeo: POI-grounded satellite captions and place-constrained Earth-observation retrieval"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=2.1",
+  "torchvision",
+  "transformers>=4.49",
+  "open_clip_torch>=2.24",
+  "huggingface_hub",
+  "safetensors",
+  "numpy",
+  "pillow",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["hiergeo", "hiergeo.eval", "hiergeo.resources"]
+
+[tool.setuptools.package-data]
+"hiergeo.resources" = ["countries.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

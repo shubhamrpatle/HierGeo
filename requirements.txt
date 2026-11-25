@@ -1,0 +1,9 @@
+# Tested with Python 3.10, torch 2.6.0 (CUDA 12.4), transformers 5.0.0, open_clip_torch 3.2.0.
+torch>=2.1
+torchvision
+transformers>=4.49   # SigLIP2 support
+open_clip_torch>=2.24
+huggingface_hub
+safetensors
+numpy
+pillow

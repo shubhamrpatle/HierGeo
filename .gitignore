@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv*/
+.pytest_cache/
+# large local artefacts
+data/*
+!data/README.md
+indices/
+checkpoints/
+results/
+benchmarks/
+*.npy
+*.npz
+wandb/
